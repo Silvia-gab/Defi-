@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DeFi Forms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/logo.svg" alt="Logo">
+        <div class="selector-language">
+            <img class="icon-flag" src="img/uk_flag.svg" alt="United Kingdom Flag">
+            <img class="selector-arrow" src="img/chevron.svg" alt="Arrow Down">
+        </div>
+    </header>
+    <main class="flex">
+        <form class="payment-form">
+            <div class="order-id">
+                Order id: TXN-20250131-987654
+            </div>
+
+            <div class="amount-container">
+                <span class="amount-label"><span class="sign">$</span> ARS</span>
+                <span class="amount-value">70000</span>
+            </div>
+
+            <div class="agreement-block">
+                <div class="agreement-checkbox">
+                    <input type="checkbox" id="agreement" required class="custom-checkbox">
+                    <label for="agreement">I agree with the <a href="#">User Agreement</a></label>
+                </div>
+
+                <div class="coin-badge">
+                    <span class="coin-label">
+                        <img src="img/Tether.svg" alt="Tether coin"
+                             class="coin-icon">
+                        <label>
+                            USDT
+                        </label>
+                    </span>
+                    <span class="coin-amount">5.82</span>
+                </div>
+            </div>
+
+            <div class="payment-methods">
+                <h2 class="methods-title">Payment methods</h2>
+                <div class="methods-grid">
+                    <div class="method-item">
+                        <img src="img/Visa.svg" alt="Visa">
+                    </div>
+                    <div class="method-item">
+                        <img src="img/ApplePay.svg" alt="Apple Pay">
+                    </div>
+                    <div class="method-item">
+                        <img src="img/Khipu.svg" alt="Khipu">
+                    </div>
+                    <div class="method-item">
+                        <img src="img/PayPal.svg" alt="PayPal">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Go to payment</button>
+        </form>
+    </main>
+    <footer>
+        <img src="img/born_in_ukraine.svg" alt="Born in Ukraine">
+    </footer>
+</body>
+</html>

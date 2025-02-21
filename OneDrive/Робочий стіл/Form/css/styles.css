@@ -1,0 +1,264 @@
+:root {
+    --primary-color: #0F5CC6;
+    --primary-color-light: #82A1FF33;
+    --primary-border: #0F5CC659;
+    --button-color: #2870AB;
+    --button-hover: #3892DC;
+    --bg-color: #EFF1F5;
+    --border-color: #CFD8E3;
+    --font-family: Inter, -apple-system, sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    background: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    color: #000;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem;
+}
+
+.logo {
+    width: 59px;
+    height: 53px;
+}
+
+.selector-language {
+    display: flex;
+    align-items: center;
+}
+
+.icon-flag {
+    margin-right: 0.5rem;
+}
+
+/* Main content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin: 5.625rem 0.625rem;
+}
+
+/* Payment form */
+.payment-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.875rem;
+    width: 100%;
+    max-width: 31.25rem;
+}
+
+.order-id {
+    font-size: 0.875rem;
+    line-height: 0.9rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+/* Amount section */
+.amount-container {
+    background-color: var(--primary-color-light);
+    border: 2px solid var(--primary-border);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.amount-label {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.amount-label .sign {
+    color: var(--primary-color);
+}
+
+.amount-value {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Agreement section */
+.agreement-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4.5rem;
+}
+
+.agreement-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 0.8125rem;
+}
+
+.custom-checkbox {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--primary-border);
+    border-radius: 0.125rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    position: relative;
+    transition: border-color 0.2s;
+}
+
+.custom-checkbox:hover,
+.custom-checkbox:active,
+.custom-checkbox:checked {
+    border-color: var(--primary-color);
+}
+
+.custom-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    width: 4px;
+    height: 7px;
+    border: solid var(--primary-color);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.agreement-checkbox a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Coin badge */
+.coin-badge {
+    background: #F0F4FF33;
+    border: 2px solid var(--primary-border);
+    padding: 0.5rem;
+    border-radius: 0.625rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.coin-label,
+.coin-amount {
+    font-size: 0.6875rem;
+    line-height: 1.2;
+    display: flex;
+}
+
+.coin-amount {
+    font-weight: 500;
+}
+
+.coin-icon {
+    margin-right: 0.25rem;
+}
+
+/* Payment methods */
+.payment-methods {
+    margin-bottom: 3.375rem;
+}
+
+.methods-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.methods-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.375rem;
+}
+
+.method-item {
+    border: 2px solid var(--primary-border);
+    border-radius: 0.625rem;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.method-item:hover {
+    border-color: var(--button-color);
+}
+
+.method-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Submit button */
+.submit-btn {
+    background-color: var(--button-color);
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.submit-btn:hover {
+    filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.25));
+}
+
+.submit-btn:focus {
+    background-color: var(--button-hover);
+}
+
+/* Media queries */
+@media screen and (max-width: 420px) {
+    .logo {
+        width: 31px;
+        height: 35px;
+    }
+
+    .icon-flag {
+        width: 24px;
+        height: 24px;
+    }
+
+    .payment-form {
+        padding: 1.2rem 0.8rem;
+    }
+
+    .order-id {
+        font-size: 0.625rem;
+        line-height: 1.2;
+    }
+
+    .methods-grid {
+        gap: 1rem;
+    }
+
+    .method-item {
+        padding: 0;
+    }
+}
